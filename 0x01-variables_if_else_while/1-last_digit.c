@@ -5,6 +5,7 @@
 /**
  * main - Print the last digit of a randomly generated number
  * and wehter it is greater than 5, less than 6, or 0
+ * description: get a random number compare it with 5
  * Return: always 0(success)
  */
 int main(void)
