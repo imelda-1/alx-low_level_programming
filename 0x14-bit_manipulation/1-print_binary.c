@@ -5,19 +5,24 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, flag = 0;
+	int i, count = 0;
+	unsigned long int current;
 
 	for (i = 63; i >= 0; i--)
 	{
-		if ((n >> i) & 1)
+		current = (n >> i) & 1;
+		if (current)
 		{
 			_putchar('1');
-			flag = 1;
+			count++;
 		}
-		else if (flag)
-			_putchar('0');
+		else
+		{
+			if (count || i == 0)
+				_putchar('0');
+		}
 	}
-	if (!flag)
+	if (!count)
 		_putchar('0');
 	_putchar('\n');
 }
